@@ -76,6 +76,7 @@ func TempCACertFile(caCert []byte, bsl string, fs filesystem.Interface) (string,
 // This list is the current environment, plus any provider-specific variables restic needs.
 func CmdEnv(backupLocation *velerov1api.BackupStorageLocation, credentialFileStore credentials.FileStore) ([]string, error) {
 	env := os.Environ()
+	logger.Infof("!!!!!!!!L %s config", env)
 	customEnv := map[string]string{}
 	var err error
 
